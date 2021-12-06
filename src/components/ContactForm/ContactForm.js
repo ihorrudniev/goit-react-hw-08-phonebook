@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import styles from './ContactForm.module.css';
-import operations from '../../redux/operations';
-import { getContacts } from '../../redux/selectors';
+import { addContacts } from '../../redux/contacts/operations';
+import { getContacts } from '../../redux/contacts/selectors';
 
 const ContactForm = ({ onAdd }) => {
   const dispatch = useDispatch();
@@ -37,7 +37,7 @@ const ContactForm = ({ onAdd }) => {
       )
     ) {
       alert(`${name} contact is already on your list`);
-    } else dispatch(operations.addContact(name, number));
+    } else dispatch(addContacts({ name, number }));
 
     setContact(contact);
     resetForm();
@@ -49,31 +49,33 @@ const ContactForm = ({ onAdd }) => {
   };
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <label htmlFor={prodIdName}>Name</label>
+      <label htmlFor={prodIdName}>Имя</label>
       <input
         id={prodIdName}
         type="text"
         name="name"
         value={name}
+        placeholder="введите имя контакта"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
         required
         onChange={handleChange}
       />
       <br />
-      <label htmlFor={prodIdNumber}>Number</label>
+      <label htmlFor={prodIdNumber}>Номер</label>
       <input
         id={prodIdNumber}
         type="tel"
         name="number"
         value={number}
+        placeholder="введите номер телефона"
         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
         title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
         required
         onChange={handleChange}
       />
       <button type="submit" className={styles.submit}>
-        Add contact
+        Добавить контакт
       </button>
     </form>
   );
