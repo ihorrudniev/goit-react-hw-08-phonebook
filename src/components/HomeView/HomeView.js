@@ -16,9 +16,7 @@ const styles = {
 
 const HomeView = () => (
   <div style={styles.container}>
-    <h1 style={styles.title}>
-      Приветствуем Вас на нашем сервисе хранения контактов!
-    </h1>
+    <h1 style={styles.title}>Приветствую Вас на сервисе хранения контактов!</h1>
   </div>
 );
 
