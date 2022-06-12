@@ -15,7 +15,7 @@ const Filter = () => {
         <h3>Search for a contact by name</h3>
         <input
           type="text"
-          placeholder="введите имя контакта"
+          placeholder="enter contact name"
           value={contacts}
           onChange={e => dispatch(changeFilter(e.target.value))}
         />

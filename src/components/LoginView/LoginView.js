@@ -68,7 +68,7 @@ const LoginView = () => {
             style={styles.input}
             type="password"
             name="password"
-            placeholder="введите пароль (не менее семи знаков)"
+            placeholder="enter a password (at least seven characters)"
             value={password}
             onChange={handleChange}
           ></input>

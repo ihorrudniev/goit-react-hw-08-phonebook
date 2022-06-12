@@ -59,7 +59,7 @@ export default function RegisterView() {
             style={styles.input}
             type="text"
             name="name"
-            placeholder="введите имя контакта"
+            placeholder="enter contact name"
             value={name}
             onChange={handleChange}
           ></input>
@@ -70,7 +70,7 @@ export default function RegisterView() {
             style={styles.input}
             type="email"
             name="email"
-            placeholder="введите email"
+            placeholder="enter email"
             value={email}
             onChange={handleChange}
           />
@@ -81,7 +81,7 @@ export default function RegisterView() {
             style={styles.input}
             type="password"
             name="password"
-            placeholder="введите пароль (не менее семи знаков)"
+            placeholder="enter a password (at least seven characters)"
             value={password}
             onChange={handleChange}
           />
