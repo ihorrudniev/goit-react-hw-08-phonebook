@@ -7,7 +7,7 @@ const ContactsView = () => {
   return (
     <div className={styles.container}>
       <ContactForm />
-      <h2>Контакты</h2>
+      <h2>Contacts</h2>
       <Filter />
       <ContactList />
     </div>

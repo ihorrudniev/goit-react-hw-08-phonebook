@@ -22,8 +22,8 @@ const styles = {
 
 const HomeView = () => (
   <div style={styles.container}>
-    <h1 style={styles.title}>Приветствую!</h1>
-    <h2 style={styles.text}> Вы на сервисе хранения контактов!</h2>
+    <h1 style={styles.title}>Greetings!</h1>
+    <h2 style={styles.text}> You are on a contact storage service!</h2>
   </div>
 );
 

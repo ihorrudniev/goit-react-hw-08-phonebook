@@ -49,7 +49,7 @@ const ContactForm = ({ onAdd }) => {
   };
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <label htmlFor={prodIdName}>Имя</label>
+      <label htmlFor={prodIdName}>Name</label>
       <input
         id={prodIdName}
         type="text"
@@ -62,7 +62,7 @@ const ContactForm = ({ onAdd }) => {
         onChange={handleChange}
       />
       <br />
-      <label htmlFor={prodIdNumber}>Номер</label>
+      <label htmlFor={prodIdNumber}>Phone</label>
       <input
         id={prodIdNumber}
         type="tel"
@@ -75,7 +75,7 @@ const ContactForm = ({ onAdd }) => {
         onChange={handleChange}
       />
       <button type="submit" className={styles.submit}>
-        Добавить контакт
+        Add contact
       </button>
     </form>
   );

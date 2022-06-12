@@ -12,7 +12,7 @@ const Filter = () => {
   return (
     <div className={styles.wrapper}>
       <label>
-        <h3>Поиск контакта по имени</h3>
+        <h3>Search for a contact by name</h3>
         <input
           type="text"
           placeholder="введите имя контакта"

@@ -48,11 +48,11 @@ const LoginView = () => {
 
   return (
     <div className={style.wrapper}>
-      <h1>Страница логина</h1>
+      <h1>Login page</h1>
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
         <label style={styles.label}>
-          Почта
+          Mail
           <input
             style={styles.input}
             type="email"
@@ -63,7 +63,7 @@ const LoginView = () => {
           ></input>
         </label>
         <label style={styles.label}>
-          Пароль
+          Password
           <input
             style={styles.input}
             type="password"
@@ -74,7 +74,7 @@ const LoginView = () => {
           ></input>
         </label>
         <button type="submit" className={style.submit}>
-          Войти
+          Login
         </button>
       </form>
     </div>

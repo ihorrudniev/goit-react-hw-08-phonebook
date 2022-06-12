@@ -9,12 +9,12 @@ const Navigation = () => {
   return (
     <nav className={styles.wrapper}>
       <NavLink to="/" exact className={styles.nav}>
-        Главная
+        Home
       </NavLink>
 
       {isLoggedIn && (
         <NavLink to="/contacts" exact className={styles.nav}>
-          Список контактов
+          List of contacts
         </NavLink>
       )}
     </nav>
