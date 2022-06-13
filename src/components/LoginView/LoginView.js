@@ -57,7 +57,7 @@ const LoginView = () => {
             style={styles.input}
             type="email"
             name="email"
-            placeholder="введите email"
+            placeholder="enter email"
             value={email}
             onChange={handleChange}
           ></input>
